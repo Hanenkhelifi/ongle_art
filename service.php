@@ -1,8 +1,33 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "ongle-art";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT id, firstname, lastname FROM MyGuests";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+  }
+} else {
+  echo "0 results";
+}
+$conn->close();
+?>
 <!doctype html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,7 +43,7 @@
 
 <body>
     <!----navbar start---->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">Ongle Art</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +71,7 @@
 
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Se Connecter</a>
+                        <a class="nav-link active" aria-current="page" class="get_btn " href="con .html" role="button ">Se Connecter</a>
                     </li>
                 </ul>
             </div>
@@ -64,24 +89,26 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="55.jpg" class="d-block w-100" alt="...">
+                <img src="3.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h3 style="color: black;">N ’y a qu’un pas à faire pour avoir votre dose de bonheur.
+                    </h3>
+
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="11.jpg" class="d-block w-100" alt="...">
+                <img src="8.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
+
+                    <p style="color: black;">
+                        L'ART DE LONGLES est votre site d'onglerie ,Pour des mains parfaites jusqu'au bout des ongles. Pour prendre soin de vos mains et les mette en valeur on à mis à votre disposition des Prothésiste Ongulaire qui se déplacent jusqu'à votre domicile.
+
+                    </p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src="7.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
                 </div>
             </div>
         </div>
