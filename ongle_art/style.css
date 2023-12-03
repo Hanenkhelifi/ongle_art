@@ -1,6 +1,11 @@
                                             body {
                                                 font-family: 'Poppins', sans-serif;
                                             }
+                                            /*****header*******/
+                                            
+                                            @media(max-width: 577px) .header-social-icon {
+                                                display: none;
+                                            }
                                             /***navbar***
 /*******************/
                                             
