@@ -142,18 +142,24 @@
                     <br>
 
                     <div class="row pt-5">
-                        <div class="col-md-6 align-items-stretch">
-                            <img class="img-fluid" src="44.jpg">
+                        <div class="col-md-5 align-items-stretch">
+                            <img class="img" src="45.jpg" style="width: 480px ">
 
                         </div>
+<br>
+<br>
+                        <div class="col-md-7">
 
-                        <div class="col-md-6">
+                            <br>
+                            <br>
+                            <br><br>
+                            <h3 class="h2-responsive fw-bold text-start section-heading"> Ongle Art</h3>
 
-                            <h3 class="h2-responsive fw-bold text-start"> Ongle Art</h3>
-                            <h6 class="ih-base"><strong class="ih-lg">L'ART DE LONGLES</strong> est votre site d'onglerie ,Pour des mains parfaites jusqu'au bout des ongles. Pour prendre soin de vos mains et les mette en valeur on à mis à votre disposition des <strong>Prothésiste Ongulaire </strong> qui se déplacent jusqu'à votre domicile.<br>
+                            <center>
+                            <h6 class="lh-base"><strong class="ih-lg">L'ART DE LONGLES</strong> est votre site d'onglerie ,Pour des mains parfaites jusqu'au bout des ongles. Pour prendre soin de vos mains et les mette en valeur on à mis à votre disposition des <strong>Prothésiste Ongulaire </strong> qui se déplacent jusqu'à votre domicile.<br>
                                 <strong> N ’y a qu’un pas à faire pour avoir votre dose de bonheur. </strong>
                             </h6>
-
+                            </center>
                         </div>
 
                     </div>
