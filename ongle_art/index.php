@@ -132,6 +132,40 @@
             </button>
         </div>
         <!--- carousel end--->
+        <!----about start--->
+        <main id="about">
+            <div class="about mt-5 mb-5">
+                <div class="container-fluid">
+                    <h1 class="h2-responsive fw-bold text-center my-2">
+                        About
+                    </h1>
+                    <br>
+
+                    <div class="row pt-5">
+                        <div class="col-md-6 align-items-stretch">
+                            <img class="img-fluid" src="44.jpg">
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <h3 class="h2-responsive fw-bold text-start"> Ongle Art</h3>
+                            <h6 class="ih-base"><strong class="ih-lg">L'ART DE LONGLES</strong> est votre site d'onglerie ,Pour des mains parfaites jusqu'au bout des ongles. Pour prendre soin de vos mains et les mette en valeur on à mis à votre disposition des <strong>Prothésiste Ongulaire </strong> qui se déplacent jusqu'à votre domicile.<br>
+                                <strong> N ’y a qu’un pas à faire pour avoir votre dose de bonheur. </strong>
+                            </h6>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </main>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
