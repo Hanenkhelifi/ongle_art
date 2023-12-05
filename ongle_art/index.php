@@ -281,7 +281,7 @@
                     margin-bottom: 0;
                 }
                 
-                https: //epicbootstrap.com/snippets/footer-dark
+                
             </style>
         </head>
 
