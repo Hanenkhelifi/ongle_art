@@ -7,7 +7,6 @@ $sql = "SELECT * FROM categories";
 $result = mysqli_query($db, $sql);
 include "./navbar.php";?>
 <br>
-
 <?php if (mysqli_num_rows($result) > 0) {
      while ($res = mysqli_fetch_assoc($result)) { ?>
 <div id="myCarousel" class="carousel slide banner1" data-ride="carousel">
@@ -17,15 +16,15 @@ include "./navbar.php";?>
         <div class="row" id="S">
           <br>
           <div class="col-lg-10 offset-lg-1 col-md-12">
+          <center>
             <div class="title">
-              <center>
                 <h1 style="background-color: pink;">
                   <b><?= $res['nom'];?></b>
                 </h1>
                 <br>
-            </center>
             </div>
-            <div class="row">
+           </center>
+            <div class="row" style="align-items: center;justify-content: center;">
               <?php 
               $sqlservice = "SELECT * FROM services WHERE categorie='".$res['id']."'";
               $resultservice = mysqli_query($db, $sqlservice);
