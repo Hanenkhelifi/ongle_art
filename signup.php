@@ -2,16 +2,20 @@
 session_start();
 
 include "./assets/database/db.php";
+
+/* si le cl login yhezni page acceuil */
 if (isset($_SESSION["id"]) && $_SESSION["id"]) {
     header("Location: ./");
     die();
 }
+
 if (isset($_POST) && $_POST) {
   $name = $_POST['nom'];
   $prenom = $_POST['prenom'];
   $email = $_POST['email'];
-  $password = $_POST['password'];
-    $ins = "INSERT INTO `users` VALUES (NULL,'".$name."','".$prenom."','".$email."','".$password."')";
+  $password = $_POST['password']; 
+
+      $ins = "INSERT INTO `users` VALUES (NULL,'".$name."','".$prenom."','".$email."','".$password."')";
       $resultins = mysqli_query($db, $ins);
       $sql = "SELECT * FROM `users` WHERE `email` = '".$email."' and `password` = '".$password."'";
       $result = mysqli_query($db, $sql);

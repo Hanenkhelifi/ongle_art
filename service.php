@@ -35,6 +35,11 @@ include "./navbar.php";?>
                 <h3 style="text-align:center;"><?= $ress["nom"]; ?></h3>
                 <img src="<?= $ress["image"]; ?>" class="img-circle" alt="<?= $ress["nom"]; ?>" width="250" height="236">
               </div>
+<!-- //******************************************************************************************* */ -->
+<!-- page indiv ll service w commentairet w rading fazet njoum -->
+  <!-- //******************************************************************************************* */ -->
+
+
               <?php }}?>
             </div>
           </div>

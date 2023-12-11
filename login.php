@@ -2,10 +2,12 @@
 session_start();
 
 include "./assets/database/db.php";
+
 if (isset($_SESSION["id"]) && $_SESSION["id"]) {
   header("Location: ./");
   die();
 }
+
 if (isset($_POST) && $_POST) {
   $email = $_POST['email'];
   $password = $_POST['password'];
