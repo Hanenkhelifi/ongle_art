@@ -91,8 +91,8 @@ ini_set("display_errors", 0);
 <div class="topnav">
 
   <div class="search-container">
-    <form action="/action_page.php" name="fo" method="GET" >
-      <input type="search" placeholder="rechercher..." name="keyword">
+    <form action="service.php" name="fo" method="GET" >
+      <input type="search" placeholder="rechercher..." name="search">
       <button type="submit" name="valider" value="rechercher" ><i class="fa fa-search"></i></button>
     </form>
 

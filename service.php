@@ -1,7 +1,8 @@
 <?php
 session_start();
+/**************************/
 
-
+/**************************************** */
 include "./assets/database/db.php";
 $sql = "SELECT * FROM categories";
 $result = mysqli_query($db, $sql);

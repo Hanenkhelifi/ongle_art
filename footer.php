@@ -92,7 +92,22 @@
 <div class="footer-dark">
   <footer>
     <div class="container">
+      <center>
       <div class="row">
+        <div class="col-sm-6 col-md-3 item">
+          <h3>Contacter</h3>
+          <ul>
+            <li>
+              <a href="#"> <i class="fa fa-phone"></i>  tel:27200200</a>
+            </li>
+            <li>
+              <a href="#"> <i class="fa fa-envelope" > </i> Ongleart@gmail.com</a>
+            </li>
+            <li>
+              <a href="#"></a>
+            </li>
+          </ul>
+        </div>
         <div class="col-sm-6 col-md-3 item">
           <h3>Services</h3>
           <ul>
@@ -107,38 +122,27 @@
             </li>
           </ul>
         </div>
-        <div class="col-sm-6 col-md-3 item">
-          <h3>About</h3>
-          <ul>
-            <li>
-              <a href="#">Company</a>
-            </li>
-            <li>
-              <a href="#">Team</a>
-            </li>
-            <li>
-              <a href="#">Careers</a>
-            </li>
-          </ul>
-        </div>
         <div class="col-md-6 item text">
           <h3>Ongle Art</h3>
           <p>De précieuses minutes de bien-être pour mieux affronter le quotidien.</p>
-        </div>
+        </div>  </center>
+        <br>
+        <center>
         <div class="col item social">
-          <a href="#">
+          <a href="https://www.facebook.com/">
             <i class="icon ion-social-facebook"></i>
           </a>
-          <a href="#">
+          <a href="https://www.twiter.com/">
             <i class="icon ion-social-twitter"></i>
           </a>
-          <a href="#">
+          <a href="https://www.snapchat.com/">
             <i class="icon ion-social-snapchat"></i>
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com/">
             <i class="icon ion-social-instagram"></i>
           </a>
-        </div>
+         
+        </div> </center>
       </div>
       <p class="copyright">OnglesArt © 2023</p>
     </div>
