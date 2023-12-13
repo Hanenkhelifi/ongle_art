@@ -102,7 +102,7 @@ ini_set("display_errors", 0);
           <div class="search-container">
             <form action="service.php" name="fo" method="GET">
               <input type="search" placeholder="rechercher..." name="search" value="<?= $search ?>"  >
-              <button type="submit" name="valider" value="rechercher"><i class="fa fa-search"></i></button>
+              <button type="submit" value="rechercher"><i class="fa fa-search"></i></button>
             </form>
             <!--****************/-->
       
