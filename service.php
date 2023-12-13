@@ -32,9 +32,6 @@ include "./navbar.php"; ?>
                   if (mysqli_num_rows($resultservice) > 0) {
                     while ($ress = mysqli_fetch_assoc($resultservice)) {
                   ?>
-
-
-
                       <div class="col-sm-3">
 
 
@@ -63,4 +60,3 @@ include "./navbar.php"; ?>
 <br>
 <?php include "./footer.php"; ?>
 </body>
-

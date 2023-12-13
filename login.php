@@ -2,7 +2,7 @@
 session_start();
 
 include "./assets/database/db.php";
-
+/*si la variable existe et a une vn-n sigque l'ut dej conncar idstok */
 if (isset($_SESSION["id"]) && $_SESSION["id"]) {
   header("Location: ./");
   die();
@@ -11,6 +11,7 @@ if (isset($_SESSION["id"]) && $_SESSION["id"]) {
 if (isset($_POST) && $_POST) {
   $email = $_POST['email'];
   $password = $_POST['password'];
+  /*pour vérifier les informations d'identification :*/
   $sql = "SELECT * FROM `users` WHERE `email` = '".$email."' and `password` = '".$password."'";
   $result = mysqli_query($db, $sql);
   if (mysqli_num_rows($result) > 0) {
@@ -25,6 +26,7 @@ if (isset($_POST) && $_POST) {
       die();
     }
     
+
   }else{
   $err = "true";
   } 

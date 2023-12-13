@@ -1,4 +1,7 @@
 <?php
+include "./assets/database/db.php";
+
+
 
 /***annuler errer */
 error_reporting(0);
@@ -20,62 +23,68 @@ ini_set("display_errors", 0);
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Ongle Art</title>
-<!-- /********************css de barre de recherche***************************** */ -->
-<style>
-* {box-sizing: border-box;}
+  <!-- /********************css de barre de recherche***************************** */ -->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
 
 
-.topnav {
-  overflow: hidden;
-  background-color: #e9e9e9;
-}
+    .topnav {
+      overflow: hidden;
+      background-color: #e9e9e9;
+    }
 
 
-.topnav .search-container {
-  float: right;
-}
+    .topnav .search-container {
+      float: right;
+    }
 
-.topnav input[type=search] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-}
+    .topnav input[type=search] {
+      padding: 6px;
+      margin-top: 8px;
+      font-size: 17px;
+      border: none;
+    }
 
-.topnav .search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
+    .topnav .search-container button {
+      float: right;
+      padding: 6px 10px;
+      margin-top: 8px;
+      margin-right: 16px;
+      background: #ddd;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+    }
 
-.topnav .search-container button:hover {
-  background: #ccc;
-}
+    .topnav .search-container button:hover {
+      background: #ccc;
+    }
 
-@media screen and (max-width: 600px) {
-  .topnav .search-container {
-    float: none;
-  }
-  .topnav a, .topnav input[type=text], .topnav .search-container button {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  .topnav input[type=text] {
-    border: 1px solid #ccc;  
-  }
-}
-</style>
-<!-- /********************************************* */ -->
+    @media screen and (max-width: 600px) {
+      .topnav .search-container {
+        float: none;
+      }
+
+      .topnav a,
+      .topnav input[type=text],
+      .topnav .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+      }
+
+      .topnav input[type=text] {
+        border: 1px solid #ccc;
+      }
+    }
+  </style>
+  <!-- /********************************************* */ -->
 </head>
 
 <body>
@@ -85,47 +94,36 @@ ini_set("display_errors", 0);
         <div class="me-5 d-lg-block d-none">
           <span>Un instant bien-être rien que pour vous.</span>
         </div>
-<!-- /*****************barre de recherche ********************/ -->
-  
-
-<div class="topnav">
-
-  <div class="search-container">
-    <form action="service.php" name="fo" method="GET" >
-      <input type="search" placeholder="rechercher..." name="search">
-      <button type="submit" name="valider" value="rechercher" ><i class="fa fa-search"></i></button>
-    </form>
+        <!-- /*****************barre de recherche ********************/ -->
 
 
-  </div>
-</div>
+        <div class="topnav">
 
-<?php 
-@$keywords=$_GET[keywords];
-@$valider=$_GET[valider];
-if (isset($valider) && !empty(trim($keywords))) {
-  include("connections.php");
-  $res=$pdo->prepare("select nom service where nom like '%$keywords' ") ;
-$res->setfetmode(PDO::FETCH_ASSOC);
-$res->execute();
-$table=$res->fetchall();
-$afficher="oui" ;
+          <div class="search-container">
+            <form action="service.php" name="fo" method="GET">
+              <input type="search" placeholder="rechercher..." name="search" value="<?= $search ?>"  >
+              <button type="submit" name="valider" value="rechercher"><i class="fa fa-search"></i></button>
+            </form>
+            <!--****************/-->
+      
 
-}
-?>
+          </div>
+        </div>
 
-<!-- <**********************recherche youtube******/ -->
+
+
+        <!-- <**********************recherche youtube******/ -->
         <div>
-          <a href="" class="me-4 text-reset">
+          <a href="https://www.facebook.com/" class="me-4 text-reset">
             <i class="fa fa-facebook"></i>
           </a>
-          <a href="" class="me-4 text-reset">
+          <a href="http://www.twitter.com" class="me-4 text-reset">
             <i class="fa fa-twitter"></i>
           </a>
-          <a href="" class="me-4 text-reset">
+          <a href="http://www.google.com" class="me-4 text-reset">
             <i class="fa fa-google"></i>
           </a>
-          <a href="" class="me-4 text-reset">
+          <a href="http://www.instagram.com" class="me-4 text-reset">
             <i class="fa fa-instagram"></i>
           </a>
         </div>
@@ -143,18 +141,14 @@ $afficher="oui" ;
           <li class="nav-item m-3">
             <a class="nav-link active" aria-current="page" href="./index.php">Accueil</a>
           </li>
-          <li class="nav-item m-3">
-            <a class="nav-link" href="#">Nos experts</a>
-          </li>
+         
           <li class="nav-item m-3">
             <a class="nav-link" href="service.php">Nos services</a>
           </li>
           <li class="nav-item m-3">
             <a class="nav-link" href="#">Nos Tarifs</a>
           </li>
-          <li class="nav-item m-3">
-            <a class="nav-link" href="#">Contacts</a>
-          </li>
+         
         </ul>
         <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
           <?php if (isset($_SESSION["id"]) && $_SESSION["id"]) { ?>
